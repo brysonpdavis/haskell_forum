@@ -30,7 +30,7 @@ main = do
   y <- computerSelect
   putStrLn ("Computer selected " ++ show y)
   case compare x y of
-    LT -> putStrLn "Player wins!"
+    GT -> putStrLn "Player wins!"
     EQ -> putStrLn "Draw!"
-    GT -> putStrLn "Computer wins!"
+    LT -> putStrLn "Computer wins!"
   main

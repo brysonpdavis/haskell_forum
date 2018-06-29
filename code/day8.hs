@@ -1,0 +1,34 @@
+-- Lipton Lecture
+-- T, a function : C -> C is a monad if there are natura transformations join, return
+-- T^2 -join-> T
+-- id -return-> T
+-- satisfying
+          -- T --Treturn--> T^2
+          -- | \\           |
+          -- |  \\          |
+          -- |   \\ <-id    |
+--  return_T |    \\        | join
+          -- |     \\       |
+          -- |      \\      |
+          -- |       \\     |
+          -- T^2---join---> T
+
+-- Def: a natural transformation F-a->G
+-- is a family of functions
+-- {FA -a_A-> GA | for every A in (fancy)A}
+--
+-- ret: a --> Ma
+-- (*): Ma --> (a --> Mb) --> Mb
+-- M(Ma)(*)(id) : M(Ma) -> Ma
+
+
+-- TA = M x A where M = (M, *) is a monoid
+-- T is a monad.
+-- join: T^2 --> T
+-- return: id --> T
+-- return_A: A --> M x A
+--           a --> ("" (<-the unit), a)
+-- join_A: Mx(MxA) --> MxA
+--         (g_1,(g_2,a)) --> (g_1*g_2, a)
+--         ("hi", ("there", 7)) --> ("hithere", 7)
+--
